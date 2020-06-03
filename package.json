@@ -1,0 +1,17 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bardia",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "fotology": "^1.2.2",
+    "fotology-x": "^1.2.4",
+    "g-i-s": "^2.1.5"
+  }
+}
