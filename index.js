@@ -12,7 +12,7 @@ bot.on('ready', () => {
 bot.on('message', msg =>{
   var temp = msg.content.toString();
   var message1 = temp.toLowerCase(); 
-  if (message1 === 'can i have a tech tip' || message1 === 'can i have a tech tip?' || message1 === 'tech tip pls' || message1 === 'pls tech tip') {
+  if (message1 === 'can i have a tech tip' || message1 === 'can i have a tech tip?' || message1 === 'tech tip pls' || message1 === 'pls tech tip' || message1 === 'gimme a tech tip'|| message1 === 'i need a tech tip') {
 
     fs.readFile('sponsors.txt', function(err, data){
         if(err) throw err;
@@ -60,14 +60,16 @@ bot.on('message', msg =>{
   if (message1 === 'help me linus') 
     {
         const embed  = new Discord.MessageEmbed()
-        .addField('Command', 'can i have a tech tip')
+        .addField('Command (Note: capitalization does not matter)', 'can i have a tech tip')
         .addField('Command(alt)','can i have a tech tip?')
         .addField('Command(alt 2)','can I have a tech tip?')
         .addField('Command(alt 3)','can I have a tech tip')
         .addField('Command(alt 4)','pls tech tip')
         .addField('Command(alt 5)','tech tip pls')
-        .addField('Suggest a tech tip', 'suggest *insert tech tip*')
-        .addField('Easter Eggs (type them in chat', 'linus, lttstore, lttstore.com, bruh, i hate dpie')
+        .addField('Command(alt 6)','i need a tech tip')
+        .addField('Command(alt 7)','gimme a tech tip')
+        .addField('Suggest a tech tip', 'suggest ***insert tech tip***')
+        .addField('Easter Eggs (type them in chat)', 'linus, lttstore, lttstore.com, bruh, i hate dpie')
         .addField('Help Command','help me linus')
         .addField('Github', 'https://github.com/RandomLemon10/tech-tip-discord-bot')
         .setColor(0xdb4105)
@@ -95,12 +97,15 @@ bot.on('message', msg =>{
 
 
 
-    if (message1 === 'linus'){
+    if (message1 === 'linus' || message1 === 'tech tip'){
     msg.react('660607734017818624');
     }
 
     if(message1 === 'i hate dpie'){
       msg.channel.send('same'); 
+    }
+    if(message1 === 'activity leaderboard'){
+      msg.channel.send('gimmie the nitrole'); 
     }
 });
 
