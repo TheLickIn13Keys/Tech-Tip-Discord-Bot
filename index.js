@@ -66,6 +66,8 @@ bot.on('message', msg =>{
         .addField('Command(alt 3)','can I have a tech tip')
         .addField('Command(alt 4)','pls tech tip')
         .addField('Command(alt 5)','tech tip pls')
+        .addField('Suggest a tech tip', 'suggest *insert tech tip*')
+        .addField('Easter Eggs (type them in chat', 'linus, lttstore, lttstore.com, bruh, i hate dpie')
         .addField('Help Command','help me linus')
         .addField('Github', 'https://github.com/RandomLemon10/tech-tip-discord-bot')
         .setColor(0xdb4105)
@@ -95,6 +97,10 @@ bot.on('message', msg =>{
 
     if (message1 === 'linus'){
     msg.react('660607734017818624');
+    }
+
+    if(message1 === 'i hate dpie'){
+      msg.channel.send('same'); 
     }
 });
 
