@@ -25,4 +25,7 @@ tech tip
 
 suggest *insert suggestion*
 
+<a href="https://top.gg/bot/703685163191762944" >
+  <img src="https://top.gg/api/widget/703685163191762944.svg" alt="tech tip" />
+</a>
 
