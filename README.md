@@ -28,11 +28,11 @@ A LinusTechTips/ Linus Tech Tips bot
 
 > i need a tech tip
 
-> !tech tip
+> tech tip
 
-> !tech disable bruh (Enables bruh reply)
+> tech! disable bruh (Enables bruh reply)
 
-> !tech enable bruh (Disables bruh reply)
+> tech! enable bruh (Disables bruh reply)
 
 > suggest ***insert tech tip suggestion***
 
