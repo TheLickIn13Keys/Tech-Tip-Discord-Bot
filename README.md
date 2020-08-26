@@ -8,9 +8,9 @@
 
 A bot that gives you tech tips and also has funni sandal man
 
-Prefix: tech!
+A LinusTechTips/ Linus Tech Tips bot
 
-Commands:
+**Commands:
 
 can i have a tech tip
 
@@ -28,14 +28,23 @@ gimme tech tip
 
 i need a tech tip
 
+!tech tip
+
+!tech disable bruh (Enables bruh reply)
+
+!tech enable bruh (Disables bruh reply)
+
 suggest ***insert tech tip suggestion***
 
-Help command:
+**Help commands:
+
+help me linus
 
 tech! help
 
-If you have any suggestions for commands or functions, please feel free to DM me
 
-If you want to suggest a tech tip, also DM me or use the tech tip suggestion feature mentioned above
+If you have any suggestions for commands of functions, please feel free to DM me
 
-This is just a small side project, so don't expect too much support, but I'm always happy to answer the occasional question via DM
+If you want to suggest a tech tip, also DM me or use suggest insert tech tip suggestion
+
+This is just a small side project, so don't expect too much support, but I'm always happy to answer the occasional question via DM or throuh the support server
