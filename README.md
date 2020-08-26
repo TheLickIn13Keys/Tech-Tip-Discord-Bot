@@ -10,7 +10,7 @@ A bot that gives you tech tips and also has funni sandal man
 
 A LinusTechTips/ Linus Tech Tips bot
 
-**Commands:**
+**Commands (Not case sensitive):**
 
 > can i have a tech tip
 
