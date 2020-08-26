@@ -50,7 +50,7 @@ dbl.on('error', e => {
 bot.on('message', async msg =>{
   var temp = msg.content.toString();
   var message1 = temp.toLowerCase(); 
-  if (message1 === 'can i have a tech tip' || message1 === 'can i have a tech tip?' || message1 === 'tech tip pls' || message1 === 'pls tech tip' || message1 === 'gimme a tech tip'|| message1 === 'i need a tech tip') {
+  if (message1 === 'can i have a tech tip' || message1 === 'can i have a tech tip?' || message1 === 'tech tip pls' || message1 === 'pls tech tip' || message1 === 'gimme a tech tip'|| message1 === 'i need a tech tip'|| message1 === 'tech! tip' ) {
     var max = db.get('tipnumber');
     var max1 = db.get('sponnumber');
     rand = Math.floor(Math.random() * (max - 1)) + 1;
