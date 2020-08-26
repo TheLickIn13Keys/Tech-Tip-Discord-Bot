@@ -149,7 +149,7 @@ bot.on('message', async msg =>{
     if(msg.member.hasPermission("MANAGE_GUILD")){
       db.set(`bruh_${msg.guild.id}`, "on");
       const embed2  = new Discord.MessageEmbed()
-          .setTitle('Bruh reply has been disabled')
+          .setTitle('Bruh reply has been enabled')
           .addField('Turn it back off with:', 'tech! bruh off')
           .setColor(0xdb4105)
       msg.channel.send(embed2);
