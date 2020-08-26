@@ -10,37 +10,37 @@ A bot that gives you tech tips and also has funni sandal man
 
 A LinusTechTips/ Linus Tech Tips bot
 
-**Commands:
+**Commands:**
 
-can i have a tech tip
+> can i have a tech tip
 
-can I have a tech tip
+> can I have a tech tip
 
-can i have a tech tip?
+> can i have a tech tip?
 
-can I have a tech tip?
+> can I have a tech tip?
 
-pls tech tip
+> pls tech tip
 
-tech tip pls
+> tech tip pls
 
-gimme tech tip
+> gimme tech tip
 
-i need a tech tip
+> i need a tech tip
 
-!tech tip
+> !tech tip
 
-!tech disable bruh (Enables bruh reply)
+> !tech disable bruh (Enables bruh reply)
 
-!tech enable bruh (Disables bruh reply)
+> !tech enable bruh (Disables bruh reply)
 
-suggest ***insert tech tip suggestion***
+> suggest ***insert tech tip suggestion***
 
-**Help commands:
+**Help commands:**
 
-help me linus
+> help me linus
 
-tech! help
+> tech! help
 
 
 If you have any suggestions for commands of functions, please feel free to DM me
