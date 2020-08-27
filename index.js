@@ -113,12 +113,12 @@ bot.on('message', async msg => {
     };
     if (msg.content === 'bruh') {
         if (msg.author.bot) return;
-        if (db.get(`bruh_${msg.guild.id}`) === "on") {
+        if (db.get(`bruh_${msg.guild.id}`) === "off") {
+            return;
+        } else {
             msg.channel.send("linus says bruh", {
                 files: ["https://pbs.twimg.com/media/D7ShRPYXoAA-XXB.jpg"]
             });
-        } else {
-            return;
         }
     };
 
@@ -167,4 +167,3 @@ bot.on('message', async msg => {
     }
 });
 bot.login(process.env.TOKEN);
-
