@@ -45,6 +45,6 @@ A LinusTechTips/ Linus Tech Tips bot
 
 If you have any suggestions for commands of functions, please feel free to DM me
 
-If you want to suggest a tech tip, also DM me or use suggest **insert tech tip suggestion**
+If you want to suggest a tech tip, also DM me or use suggest ***insert tech tip suggestion***
 
 This is just a small side project, so don't expect too much support, but I'm always happy to answer the occasional question via DM or throuh the support server
