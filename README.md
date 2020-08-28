@@ -30,9 +30,9 @@ A LinusTechTips/ Linus Tech Tips bot
 
 > tech tip
 
-> tech! disable bruh (Enables bruh reply)
+> tech! disable bruh (Disables bruh reply)
 
-> tech! enable bruh (Disables bruh reply)
+> tech! enable bruh (Enables bruh reply)
 
 > suggest ***insert tech tip suggestion***
 
