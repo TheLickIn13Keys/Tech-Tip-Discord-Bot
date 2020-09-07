@@ -83,7 +83,7 @@ bot.on('message', async msg => {
             .addField('Turn on Bruh Reply', 'tech! enable bruh')
             .addField('Help Command', 'tech! help')
             .addField('Github', 'https://github.com/TheLickIn13Keys/tech-tip-discord-bot')
-            .setFooter('Created by tech tip#9289')
+            .setFooter('Created by tech tip#0001')
             .setColor(0xdb4105)
         msg.channel.send(embed);
     }
