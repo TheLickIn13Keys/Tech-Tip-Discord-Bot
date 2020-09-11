@@ -22,7 +22,8 @@ bot.on("guildCreate", guild => {
         .setTitle('Thanks For Adding Me to Your Server!')
         .addField('Prefix', 'tech!')
         .addField('Help Command', 'tech! help')
-        .addField('Disable Bruh Reply', 'tech! disable bruh')
+        .addField('Turn off Bruh Reply', 'tech! disable bruh')
+        .addField('Turn on Bruh Reply', 'tech! enable bruh')
         .addField('Github', 'https://github.com/TheLickIn13Keys/tech-tip-discord-bot')
         .setThumbnail("https://pbs.twimg.com/media/D7ShRPYXoAA-XXB.jpg")
         .setColor(0xdb4105)
@@ -41,6 +42,7 @@ dbl.on('error', e => {
 })
 
 bot.on('message', async msg => {
+    if(msg.author.bot) return;
     var temp = msg.content.toString();
     var message1 = temp.toLowerCase();
     if (message1 === 'can i have a tech tip' || message1 === 'can i have a tech tip?' || message1 === 'tech tip pls' || message1 === 'pls tech tip' || message1 === 'gimme a tech tip' || message1 === 'i need a tech tip' || message1 === 'tech! tip') {
@@ -116,9 +118,8 @@ bot.on('message', async msg => {
         if (db.get(`bruh_${msg.guild.id}`) === "off") {
             return;
         } else {
-            msg.channel.send("linus says bruh", {
-                files: ["https://pbs.twimg.com/media/D7ShRPYXoAA-XXB.jpg"]
-            });
+            msg.channel.send("linus says bruh");
+            msg.channel.send("https://cdn.discordapp.com/attachments/642568249300615198/750383457590313091/D7ShRPYXoAA-XXB.jpg");
         }
     };
 
@@ -164,6 +165,29 @@ bot.on('message', async msg => {
             .addField('Successfully Suggested:', spon)
             .setColor(0xdb4105)
         msg.channel.send(embed01);
+    }
+    if(msg.channel.type == "dm"){
+        msg.channel.send("Oopies! I can't reply to DMs, but if you have questions please DM tech tip#0001");
+        msg.channel.send("If you need help with the bot please use the help command tech! help");
+        const embed = new Discord.MessageEmbed()
+        .addField('Command (Note: capitalization does not matter)', 'can i have a tech tip')
+        .addField('Command(alt)', 'can i have a tech tip?')
+        .addField('Command(alt 2)', 'can I have a tech tip?')
+        .addField('Command(alt 3)', 'can I have a tech tip')
+        .addField('Command(alt 4)', 'pls tech tip')
+        .addField('Command(alt 5)', 'tech tip pls')
+        .addField('Command(alt 6)', 'i need a tech tip')
+        .addField('Command(alt 7)', 'gimme a tech tip')
+        .addField('Suggest a tech tip', 'tech! suggest ***insert tech tip***')
+        .addField('Suggest a future sponsor', 'tech! sponsor ***insert sponsor***')
+        .addField('"Easter Eggs" (type them in chat)', 'linus, lttstore, lttstore.com, bruh')
+        .addField('Turn off Bruh Reply', 'tech! disable bruh')
+        .addField('Turn on Bruh Reply', 'tech! enable bruh')
+        .addField('Help Command', 'tech! help')
+        .addField('Github', 'https://github.com/TheLickIn13Keys/tech-tip-discord-bot')
+        .setFooter('Created by tech tip#0001')
+        .setColor(0xdb4105)
+        msg.channel.send(embed);
     }
 });
 bot.login(process.env.TOKEN);
