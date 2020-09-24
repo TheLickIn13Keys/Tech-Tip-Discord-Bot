@@ -1,13 +1,14 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const DBL = require("dblapi.js");
-const db = require('quick.db');
+const db = require('quick.db');;
+const ytdl = require('ytdl-core');
 var stringSimilarity = require('string-similarity');
 require('dotenv').config()
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwMzY4NTE2MzE5MTc2Mjk0NCIsImJvdCI6dHJ1ZSwiaWF0IjoxNTk0MDAwNDEwfQ.L8J0vDQgz10lKxf3EgtDK1pHFMHdhvGBFx90L_V_4Hc', bot);
 var fs = require('fs');
-var fs = require('fs');
 var gis = require('g-i-s');
+const { error } = require('console');
 
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag}!`);
@@ -62,7 +63,7 @@ bot.on('message', async msg => {
                 const embed = new Discord.MessageEmbed()
                     .addField('tech tip #' + db.get(`tip_${rand}.tipnum`) + ':', db.get(`tip_${rand}.tip`))
                     .setColor(0xdb4105)
-                    .setThumbnail(results[0].url)
+                    .setImage(results[0].url)
                     .addField("This tech tip is brought to you by:", db.get(`tip_${rand}.usertag`) + " and " + db.get(`sponsor_${rand1}`));
                 msg.channel.send(embed);
             }
@@ -83,48 +84,56 @@ bot.on('message', async msg => {
             .addField('Suggest a tech tip', 'tech! suggest ***insert tech tip***')
             .addField('Suggest a future sponsor', 'tech! sponsor ***insert sponsor***')
             .addField('"Easter Eggs" (type them in chat)', 'linus, lttstore, lttstore.com, bruh')
+            .addField('Play funni tech tip song', 'tech tip song or tech! song')
+            .addField('Stop funni tech tip song', 'tech tip song stop or tech! song stop')
             .addField('Turn off Bruh Reply', 'tech! disable bruh')
             .addField('Turn on Bruh Reply', 'tech! enable bruh')
             .addField('Help Command', 'tech! help')
             .addField('Github', 'https://github.com/TheLickIn13Keys/tech-tip-discord-bot')
-            .setFooter('Created by tech tip#0001')
+            .setFooter('Created by tech tip#9999')
             .setColor(0xdb4105)
         msg.channel.send(embed);
     }
 
     if (message1.startsWith("tech! suggest")) {
         var suggested = msg.content.slice(14) + "\n"
+        var isSimilar = false;
         for(let i = 1; i<=db.get('tipnumber'); i++){
+            if(isSimilar = true) return;
             var fooooo = db.get(`tip_${i}.tip`);
             var suggCheck = suggested;
+
             var similarity = stringSimilarity.compareTwoStrings(fooooo, suggCheck); 
             if(similarity > .50){
                 var oopsMessage = `Oops,`+"\n"+ `${suggested} is too similar to` + "\n" + `${fooooo}`;
                 const embed69 = new Discord.MessageEmbed()
-                    .addField(oopsMessage, `Similarity: ${similarity*100}% \n If you feel like they are not similar please contact tech tip#0001`)
+                    .addField(oopsMessage, `Similarity: ${similarity*100}% \n If you feel like they are not similar please contact tech tip#9999`)
                     .setColor(0xdb4105)
                 msg.channel.send(embed69);
+                isSimilar = true;
                 return;
             }
         }
 
             if (suggested.includes("@")) {
                 msg.channel.send("Please don't mention users in tech tips!")
-            } else {
-                var currentTipNum = db.get('tipnumber') + 1;
-                db.set(`tip_${currentTipNum}`, {
-                    tip: `${suggested}`,
-                    username: `${msg.author.username}`,
-                    usertag: `${msg.author.tag}`,
-                    tipnum: `${currentTipNum}`
-                });
-                db.set('tipnumber', currentTipNum);
-                const embed00 = new Discord.MessageEmbed()
-                    .addField('Successfully Suggested:', suggested)
-                    .setColor(0xdb4105)
-                msg.channel.send(embed00);
-		return;
-            }
+                return;
+            } 
+
+            var currentTipNum = db.get('tipnumber') + 1;
+            db.set(`tip_${currentTipNum}`, {
+                tip: `${suggested}`,
+                username: `${msg.author.username}`,
+                usertag: `${msg.author.tag}`,
+                tipnum: `${currentTipNum}`
+            });
+            db.set('tipnumber', currentTipNum);
+            const embed00 = new Discord.MessageEmbed()
+                .addField('Successfully Suggested:', suggested)
+                .setColor(0xdb4105)
+            msg.channel.send(embed00);
+		    return;
+            
 
 
     }
@@ -184,8 +193,48 @@ bot.on('message', async msg => {
             .setColor(0xdb4105)
         msg.channel.send(embed01);
     }
+    if(msg.content === 'tech tip song' || msg.content === 'tech! song'){
+        try{
+            if(!(msg.guild.me.hasPermission("CONNECT")) || !(msg.guild.me.hasPermission("SPEAK")) || !(msg.guild.me.hasPermission("VIEW_CHANNEL"))){
+                msg.channel.send("Linus sad because linus doesn't have perms to play funni song");
+                return;
+            }
+    
+            const voiceChannel = msg.member.voice.channel;
+    
+            if (!voiceChannel) {
+                return msg.reply('You must be in a voice channel to play the funni song');
+            }
+    
+             await voiceChannel.join().then(connection => {
+    
+                const stream = ytdl('https://youtu.be/mVxY55VQdik', { filter: 'audioonly' });
+                const dispatcher = connection.play(stream);
+                
+                msg.channel.send("Now playing funni tech tip song");
+                var isStop = false;
+    
+    
+                dispatcher.on('finish', () => voiceChannel.leave());
+                
+            });
+
+        }
+        catch(err){
+            msg.channel.send("Linus sad because linus doesn't have perms to play funni song");
+                return;
+        }
+
+
+
+    }
+    if(msg.content === "tech! song stop" || msg.content === "tech tip song stop"){
+        const voiceChannel = msg.member.voice.channel;
+        var isStop = true;
+        voiceChannel.leave();
+    }
     if(msg.channel.type == "dm"){
-        msg.channel.send("Oopies! I can't reply to DMs, but if you have questions please DM tech tip#0001");
+        msg.channel.send("Oopies! I can't reply to DMs, but if you have questions please DM tech tip#9999");
         msg.channel.send("If you need help with the bot please use the help command tech! help");
         const embed = new Discord.MessageEmbed()
         .addField('Command (Note: capitalization does not matter)', 'can i have a tech tip')
@@ -199,13 +248,15 @@ bot.on('message', async msg => {
         .addField('Suggest a tech tip', 'tech! suggest ***insert tech tip***')
         .addField('Suggest a future sponsor', 'tech! sponsor ***insert sponsor***')
         .addField('"Easter Eggs" (type them in chat)', 'linus, lttstore, lttstore.com, bruh')
+        .addField('Play funni tech tip song', 'tech tip song or tech! song')
         .addField('Turn off Bruh Reply', 'tech! disable bruh')
         .addField('Turn on Bruh Reply', 'tech! enable bruh')
         .addField('Help Command', 'tech! help')
         .addField('Github', 'https://github.com/TheLickIn13Keys/tech-tip-discord-bot')
-        .setFooter('Created by tech tip#0001')
+        .setFooter('Created by tech tip#9999')
         .setColor(0xdb4105)
         msg.channel.send(embed);
     }
+
 });
 bot.login(process.env.TOKEN);
