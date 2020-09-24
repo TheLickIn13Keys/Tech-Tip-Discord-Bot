@@ -38,6 +38,11 @@ A LinusTechTips/ Linus Tech Tips bot
 
 > suggest ***insert tech tip suggestion***
 
+> tech tip song/ tech! song
+
+> tech tip song stop/ tech! song stop
+
+
 **Help commands:**
 
 > help me linus
