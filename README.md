@@ -12,6 +12,8 @@ A LinusTechTips/ Linus Tech Tips bot
 
 # Note: I have seen the exact bot but using a different token, so I will be removing the main bot files and code until further notice, please DM tech tip#9999 for more details or if you want to see the code or you need help
 
+# Note: If my nitro runs out, DM me on Twitter @TheLickIn13Keys
+
 **Commands (Not case sensitive):**
 
 > can i have a tech tip
