@@ -10,7 +10,7 @@ A bot that gives you tech tips and also has funni sandal man
 
 A LinusTechTips/ Linus Tech Tips bot
 
-# Note: I have seen the exact bot but using a different token, so I will be removing the main bot files and code until further notice, please DM tech tip#9999 for more details or if you want to see the code or you need help
+# Note: I have seen the exact bot but using a different token, so I will be removing the main bot files and code until further notice, please DM TheLickIn13Keys#9999 for more details or if you want to see the code or you need help
 
 # Note: If my nitro runs out, DM me on Twitter @TheLickIn13Keys
 
