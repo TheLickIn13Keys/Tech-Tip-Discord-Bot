@@ -16,41 +16,37 @@ A LinusTechTips/ Linus Tech Tips bot
 
 **Commands (Not case sensitive):**
 
+**Command (Note: capitalization does not matter)**
 > can i have a tech tip
-
-> can I have a tech tip
-
+**Command(alias 1)**
 > can i have a tech tip?
-
-> can I have a tech tip?
-
+**Command(alias 2)**
 > pls tech tip
-
+**Command(alias 3)**
 > tech tip pls
-
-> gimme tech tip
-
+**Command(alias 4)**
 > i need a tech tip
-
-> tech tip
-
-> tech! disable bruh (Enables bruh reply)
-
-> tech! enable bruh (Disables bruh reply)
-
-> suggest ***insert tech tip suggestion***
-
-> tech tip song/ tech! song
-
-> tech tip song stop/ tech! song stop
-
-
-**Help commands:**
-
-> help me linus
-
+**Command(alias 5)**
+> gimme a tech tip
+**Suggest a tech tip**
+> tech! suggest <insert tech tip>
+**Suggest a future sponsor**
+> tech! sponsor <insert sponsor>
+**"Easter Eggs" (type them in chat)**
+> linus, lttstore, lttstore.com, bruh
+**Play funni tech tip song**
+> tech! song play
+**Stop funni tech tip song**
+> tech! song stop
+**Turn off Bruh Reply**
+> tech! bruh disable
+**Turn on Bruh Reply**
+> tech! bruh enable
+**Help Command**
 > tech! help
-
+**Invite**
+> tech! invite
+ 
 
 If you have any suggestions for commands of functions, please feel free to DM me
 
