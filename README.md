@@ -6,6 +6,8 @@
 
 [Click Me to add the bot to your server](https://discord.com/oauth2/authorize?client_id=703685163191762944&scope=bot&permissions=8)
 
+[Click Me to go to the web dashboard](https://www.techtip.ml)
+
 A bot that gives you tech tips and also has funni sandal man
 
 A LinusTechTips/ Linus Tech Tips bot
@@ -14,65 +16,53 @@ A LinusTechTips/ Linus Tech Tips bot
 
 # Note: If my nitro runs out, DM me on Twitter @TheLickIn13Keys
 
-**Command (Note: capitalization does not matter)**
+**= Command List =**
 
-> can i have a tech tip
+**[Use tech!help (Or your custom server prefix) <command name> for details]**
 
-**Command(alias 1)**
+**== Base ==**
 
-> can i have a tech tip?
+tech!embed   :: Create an embed with an easy text based embed builder
 
-**Command(alias 2)**
+tech!face    :: gives a funni linus face
 
-> pls tech tip
+tech!lore    :: wacky linus tech tips doing uncharacteristic things
 
-**Command(alias 3)**
+tech!song    :: Play the funni tech tip song
 
-> tech tip pls
+tech!sponsor :: Suggest a future sponsor
 
-**Command(alias 4)**
+tech!suggest :: Suggest a tech tip.
 
-> i need a tech tip
+tech!tip     :: Gives you a tech tip (can also be run with "can i have a tech tip" (not case sensitive))
 
-**Command(alias 5)**
 
-> gimme a tech tip
+**== General ==**
 
-**Suggest a tech tip**
+tech!help    :: Displays all the available commands for your permission level.
 
-> tech! suggest <insert tech tip>
- 
-**Suggest a future sponsor**
+tech!invite  :: Gives the invite link.
 
-> tech! sponsor <insert sponsor>
- 
-**"Easter Eggs" (type them in chat)**
+tech!mylevel :: Tells you your permission level for the current message location.
 
-> linus, lttstore, lttstore.com, bruh
+tech!ping    :: Checks bot and API latency.
 
-**Play funni tech tip song**
+tech!set     :: View or change settings for your server.
 
-> tech! song play
+tech!stats   :: Gives some useful bot statistics
 
-**Stop funni tech tip song**
 
-> tech! song stop
+**== Moderation ==**
 
-**Turn off Bruh Reply**
+tech!ban     :: Bans a user
 
-> tech! bruh disable
+tech!kick    :: Kicks a user
 
-**Turn on Bruh Reply**
+tech!mute    :: Mutes a user
 
-> tech! bruh enable
+tech!unban   :: Unbans a user
 
-**Help Command**
-
-> tech! help
-
-**Invite**
-
-> tech! invite
+tech!unmute  :: Unmutes a user
  
 
 If you have any suggestions for commands of functions, please feel free to DM me
