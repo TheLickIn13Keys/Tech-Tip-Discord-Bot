@@ -1,0 +1,30 @@
+<%- include('blocks/header', {bot, user, path}) %>
+  <div class="jumbotron">
+    <div>
+      <%
+        var desc = "A bot that gives you tech tips and also has funni sandal man.";
+      %>
+      <h1><%= bot.user.username %> Dashboard</h1>
+      <img src="/public/dashimage.png" width="1050" height="600" class="d-inline-block align-middle alt="">
+      <h1></h1>
+      <p class="lead">
+        <a class="btn btn-primary" href="/commands" role="button">Command Help »</a>
+      </p>
+      <p class="lead">
+        <a class="btn btn-primary" href="/dashboard" role="button">Dashboard »</a>
+      </p>
+      <p class="lead">
+        <a class="btn btn-primary" href="https://top.gg/bot/703685163191762944" role="button">Top.gg Page »</a>
+      </p>
+      <p></p>
+
+<p>Tech Tip Bot provides you with the freshest ironic and unironic tech tips around in addition to linus lore and comedic linus faces. Anyone can contribute to the every growing list by suggesting a tech tip with <code>tech!suggest &lt;a tech tip&gt;</code>. As long as it doesn&#39;t break Discord&#39;s TOS, it will probably get accepted.</p>
+<p>The bot also has many moderation features and an embed builder that everyone can enjoy!</p>
+<p>Tech Tip gets updated daily so expect new features on a weekly basis!</p>
+<p>A LinusTechTips/ Linus Tech Tips bot</p>
+</blockquote>
+<p>If you have any suggestions for commands or functions, please feel free to DM TheLickIn13Keys#9999 or Twitter @TheLickIn13Keys</p>
+<p>I&#39;m always happy to answer the occasional question via DM or through the support server</p>
+    </div>
+  </div>
+<% include('./blocks/footer') %>

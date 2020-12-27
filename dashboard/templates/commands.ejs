@@ -1,0 +1,105 @@
+<%- include('blocks/header', {bot, user, path}) %>
+<% const help = {};
+bot.commands.forEach((command) => {
+  const cat = command.help.category;
+  if (!help.hasOwnProperty(cat)) help[cat] = [];
+  help[cat].push(command);
+});
+%>
+<div class="container">
+  <h2>Commands</h2>
+
+  <style>
+    .collapsible {
+      background-color: #2A9FD6;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      border-radius: 25px;
+    }
+    
+    .active, .collapsible:hover {
+      background-color: rgb(40,40,40);
+    }
+    
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #2A2D32;
+    }
+    .collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+    }
+    .active:after {
+      content: "\2796"; /* Unicode character for "minus" sign (-) */
+    }
+
+  </style>
+    </head>
+    <body>
+    <% for (const category in help) { %>
+      <% if (category != "System") { %>
+      <h1></h1>
+      <button type="button" class="collapsible"><%= category %> </button>
+        <div class="content">
+          <h1></h1>
+          <div class="card-columns">
+
+              <% for (const command of help[category]) { %>
+                <div class="card">
+                  <h3 class="card-header"><%= command.help.name %></h3>
+                  <div class="card-body" style="height: 100px;">
+                    <p class="card-text"><%= command.help.description %></p>
+                  </div>
+                  <div class="card-footer">Permission Level: <%= command.conf.permLevel %><br /><a href="#" data-toggle="modal" data-target="#<%= `${command.help.name}` %>Modal">Click for more...</a></div>
+                </div>
+                <div id="<%= `${command.help.name}` %>Modal" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header btn-info disabled">
+                        <h4 class="modal-title"><%= command.help.name %></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Usage Example: <%= command.help.usage %></p>
+                        <p>Command Aliases: <%= `${command.conf.aliases.join(', ')}` %></p>
+                      </div>
+                      <div class="modal-footer"><button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button></div>
+                    </div>
+                  </div>
+                </div>
+            <% } %>
+          </div>
+        </div>
+      <% } %>
+    <% } %>
+    
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+    
+    </body>
+<% include('./blocks/footer') %>

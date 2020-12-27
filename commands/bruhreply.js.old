@@ -1,0 +1,54 @@
+const Discord = require("discord.js");
+const db = require('quick.db');;
+const ytdl = require('ytdl-core');
+var stringSimilarity = require('string-similarity');
+var fs = require('fs');
+var gis = require('g-i-s');
+const { error } = require('console');
+const { arch } = require('os');
+
+exports.conf = {
+    enabled: true,
+    guildOnly: true,
+    aliases: [],
+    permLevel: "User"
+};
+
+exports.help = {
+    name: "bruh",
+    category: "Base",
+    description: 'suggest a tech tip',
+    usage: "bruh <enable/disable>"
+};
+exports.run = async (client, message, args, level) => {
+    if (args === 'disable') {
+        if (msg.member.hasPermission("MANAGE_GUILD")) {
+            db.set(`bruh_${msg.guild.id}`, "off");
+            const embed1 = new Discord.RichEmbed()
+                .setTitle('Bruh reply has been disabled')
+                .addField('Turn it back on with:', 'tech! bruh enable')
+                .setColor(0xdb4105)
+            msg.channel.send(embed1);
+        } else {
+            msg.reply("Sorry you don't have permission to execute this command!")
+        }
+
+    }
+    else if (args === 'enable') {
+        if (msg.member.hasPermission("MANAGE_GUILD")) {
+            db.set(`bruh_${msg.guild.id}`, "on");
+            const embed2 = new Discord.RichEmbed()
+                .setTitle('Bruh reply has been enabled')
+                .addField('Turn it back off with:', 'tech! bruh disable')
+                .setColor(0xdb4105)
+            msg.channel.send(embed2);
+        } else {
+            msg.reply("Sorry you don't have permission to execute this command!")
+        }
+    }
+    else{
+        msg.channel.send("USAGE: ```tech! bruh <enable/disable>```")
+        return;
+    }
+    
+}   

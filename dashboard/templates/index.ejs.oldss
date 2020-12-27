@@ -1,0 +1,27 @@
+<%- include('blocks/header', {bot, user, path}) %>
+  <div class="jumbotron">
+    <div>
+      <%
+        var desc = "A bot that gives you tech tips and also has funni sandal man.";
+        console.log(bot.application.description);
+      %>
+      <h1><%= bot.user.username %> Dashboard</h1>
+      <p class="lead">
+        <a class="btn btn-primary" href="/commands" role="button">Command Help »</a>
+      </p>
+      <p class="lead">
+        <a class="btn btn-primary" href="/dashboard" role="button">Dashboard »</a>
+      </p>
+      <p class="lead">
+        <a class="btn btn-primary" href="https://top.gg/bot/703685163191762944" role="button">Top.gg Page »</a>
+      </p>
+      <h1 id="desc1">A bot that gives you tech tips and also has funni sandal man</h1>
+      <p></p>
+<p>A LinusTechTips/ Linus Tech Tips bot</p>
+</blockquote>
+<p>If you have any suggestions for commands of functions, please feel free to DM me</p>
+<p>If you want to suggest a tech tip, also DM me or use suggest insert tech tip suggestion</p>
+<p>This is just a small side project, so don&#39;t expect too much support, but I&#39;m always happy to answer the occasional question via DM or throuh the support server</p>
+    </div>
+  </div>
+<% include('./blocks/footer') %>
