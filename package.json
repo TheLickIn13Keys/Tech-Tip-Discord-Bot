@@ -1,7 +1,7 @@
 {
-  "name": "guidebot",
-  "version": "3.0.1",
-  "description": "A boilerplate example bot with command handler and reloadable commands. Updated and Maintained by the Idiot's Guide Community",
+  "name": "Tech-Tip-Bot",
+  "version": "1.0.0",
+  "description": "Tech Tip Bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -9,19 +9,7 @@
   "engines": {
     "node": ">=8"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/An-Idiots-Guide/guidebot.git"
-  },
-  "author": "Evelyne Lachance <eslachance@gmail.com> (http://evie.codes)",
-  "contributors": [
-    "York (http://anidiots.guide)"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/An-Idiots-Guide/guidebot/issues"
-  },
-  "homepage": "https://github.com/An-Idiots-Guide/guidebot#readme",
+  "author": "Bardia Anvari",
   "dependencies": {
     "better-sqlite3": "^6.0.1",
     "body-parser": "^1.18.3",
