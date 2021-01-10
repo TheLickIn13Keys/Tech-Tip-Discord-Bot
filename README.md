@@ -10,9 +10,13 @@
 
 A bot that gives you tech tips and also has funni sandal man
 
-A LinusTechTips/ Linus Tech Tips bot
+Tech Tip Bot provides you with the freshest ironic and unironic tech tips around in addition to linus lore and comedic linus faces. Anyone can contribute to the every growing list by suggesting a tech tip with tech!suggest <a tech tip>. As long as it doesn't break Discord's TOS, it will probably get accepted.
 
-# Note: I have seen the exact bot but using a different token, so I will be removing the main bot files and code until further notice, please DM TheLickIn13Keys#9999 for more details or if you want to see the code or you need help
+The bot also has many moderation features and an embed builder that everyone can enjoy!
+
+Tech Tip gets updated daily so expect new features on a weekly basis!
+
+A LinusTechTips/ Linus Tech Tips bot
 
 # Note: If my nitro runs out, DM me on Twitter @TheLickIn13Keys
 
