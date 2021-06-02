@@ -12,7 +12,7 @@ A bot that gives you tech tips and also has funni sandal man
 
 Tech Tip Bot provides you with the freshest ironic and unironic tech tips around in addition to linus lore and comedic linus faces. Anyone can contribute to the every growing list by suggesting a tech tip with tech!suggest <a tech tip>. As long as it doesn't break Discord's TOS, it will probably get accepted.
 
-The bot also has many moderation features and an embed builder that everyone can enjoy!
+The bot also has many moderation features, a music player, and an embed builder that everyone can enjoy!
 
 Tech Tip gets updated daily so expect new features on a weekly basis!
 
@@ -67,6 +67,31 @@ tech!mute    :: Mutes a user
 tech!unban   :: Unbans a user
 
 tech!unmute  :: Unmutes a user
+ 
+ 
+ **== Music ==**
+
+tech!play    :: Plays music
+
+tech!stop    :: stops the music
+
+tech!control :: Opens a music controller
+
+tech!queue   :: Displays the current queue
+
+tech!lock    :: locks music controls
+ 
+tech!unlock  :: unlocks music controls
+
+tech!replay  :: replays the most recent song
+
+tech!pause   :: Pauses any playing music
+
+tech!resume  :: resumes playback
+ 
+tech!skip    :: skips the current track
+
+tech!vol     :: sets volume
  
 
 If you have any suggestions for commands of functions, please feel free to DM me
