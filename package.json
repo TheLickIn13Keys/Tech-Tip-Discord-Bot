@@ -22,7 +22,7 @@
     "discordjs-prompter": "^2.0.4",
     "ejs": "^3.0.2",
     "enmap": "^5.2.4",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-passport": "^0.1.0",
     "express-session": "^1.15.6",
     "g-i-s": "^2.1.6",
